@@ -32,7 +32,7 @@ public:
     QAction *actionUndo;
     QAction *actionRedo;
     QAction *actionAbout;
-    QAction *actionHow_to_Use;
+    QAction *actionHowToUse;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QMdiArea *mdiArea;
@@ -58,8 +58,8 @@ public:
         actionRedo->setObjectName(QStringLiteral("actionRedo"));
         actionAbout = new QAction(QtImageViewerMainWindow);
         actionAbout->setObjectName(QStringLiteral("actionAbout"));
-        actionHow_to_Use = new QAction(QtImageViewerMainWindow);
-        actionHow_to_Use->setObjectName(QStringLiteral("actionHow_to_Use"));
+        actionHowToUse = new QAction(QtImageViewerMainWindow);
+        actionHowToUse->setObjectName(QStringLiteral("actionHowToUse"));
         centralwidget = new QWidget(QtImageViewerMainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -96,7 +96,7 @@ public:
         menuEdit->addAction(actionUndo);
         menuEdit->addAction(actionRedo);
         menuHelp->addAction(actionAbout);
-        menuHelp->addAction(actionHow_to_Use);
+        menuHelp->addAction(actionHowToUse);
 
         retranslateUi(QtImageViewerMainWindow);
 
@@ -111,7 +111,7 @@ public:
         actionUndo->setText(QApplication::translate("QtImageViewerMainWindow", "Undo", 0));
         actionRedo->setText(QApplication::translate("QtImageViewerMainWindow", "Redo", 0));
         actionAbout->setText(QApplication::translate("QtImageViewerMainWindow", "About", 0));
-        actionHow_to_Use->setText(QApplication::translate("QtImageViewerMainWindow", "How to Use", 0));
+        actionHowToUse->setText(QApplication::translate("QtImageViewerMainWindow", "How to Use", 0));
         menuFile->setTitle(QApplication::translate("QtImageViewerMainWindow", "File", 0));
         menuEdit->setTitle(QApplication::translate("QtImageViewerMainWindow", "Edit", 0));
         menuWindows->setTitle(QApplication::translate("QtImageViewerMainWindow", "Windows", 0));

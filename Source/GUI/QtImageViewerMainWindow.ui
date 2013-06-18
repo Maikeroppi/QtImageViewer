@@ -54,7 +54,7 @@
      <string>Help</string>
     </property>
     <addaction name="actionAbout"/>
-    <addaction name="actionHow_to_Use"/>
+    <addaction name="actionHowToUse"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -87,7 +87,7 @@
     <string>About</string>
    </property>
   </action>
-  <action name="actionHow_to_Use">
+  <action name="actionHowToUse">
    <property name="text">
     <string>How to Use</string>
    </property>
