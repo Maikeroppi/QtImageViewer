@@ -31,12 +31,12 @@ void QtImageViewerMainWindow::Open_()
     ); 
     
     if ( !FileName.isEmpty() ) {
-        ImageViewerWindow* Window = CreateImageViewerWindow_();
-        if ( Window->LoadImageFile( FileName ) ) {
+        ImageViewer* Viewer = CreateImageViewerWindow_();
+        if ( Viewer->LoadImageFile( FileName ) ) {
             statusBar()->showMessage( "Image file loaded: " + FileName, 2000);
-            Window->show();
+            Viewer->show();
         } else {
-            Window->close();
+			Viewer->close();
         }
     }
 }
@@ -61,11 +61,11 @@ void QtImageViewerMainWindow::HowToUse_()
 {
 }
 
-ImageViewerWindow* QtImageViewerMainWindow::CreateImageViewerWindow_()
+ImageViewer* QtImageViewerMainWindow::CreateImageViewerWindow_()
 {
-    ImageViewerWindow* Window = new ImageViewerWindow();
-    ui->mdiArea->addSubWindow( Window );
-    return Window;
+    ImageViewer* Viewer = new ImageViewer();
+    ui->mdiArea->addSubWindow( Viewer );
+    return Viewer;
 }
 
 

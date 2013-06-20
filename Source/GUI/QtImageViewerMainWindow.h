@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 
-#include "ImageViewerWindow.h"
+#include "ImageViewer.h"
 
 namespace Ui {
 class QtImageViewerMainWindow;
@@ -30,7 +30,7 @@ private slots:
 private:
     Ui::QtImageViewerMainWindow *ui;
 
-    ImageViewerWindow* CreateImageViewerWindow_();
+    ImageViewer* CreateImageViewerWindow_();
 };
 
 #endif // QTIMAGEVIEWERMAINWINDOW_H
