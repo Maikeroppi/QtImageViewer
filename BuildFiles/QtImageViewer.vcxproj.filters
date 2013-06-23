@@ -4,6 +4,9 @@
     <ClCompile Include="..\Source\GUI\ImageViewer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Source\GUI\QtImageViewerCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\Source\GUI\QtImageViewerMainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -16,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\GUI\ImageViewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\GUI\QtImageViewerCommands.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\GUI\QtImageViewerMainWindow.h">

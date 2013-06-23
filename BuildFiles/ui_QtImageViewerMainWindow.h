@@ -13,10 +13,10 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMdiArea>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
@@ -35,7 +35,7 @@ public:
     QAction *actionHowToUse;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
-    QMdiArea *mdiArea;
+    QGraphicsView *ImageViewer;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
@@ -64,10 +64,12 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        mdiArea = new QMdiArea(centralwidget);
-        mdiArea->setObjectName(QStringLiteral("mdiArea"));
+        ImageViewer = new QGraphicsView(centralwidget);
+        ImageViewer->setObjectName(QStringLiteral("ImageViewer"));
+        ImageViewer->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        ImageViewer->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-        horizontalLayout->addWidget(mdiArea);
+        horizontalLayout->addWidget(ImageViewer);
 
         QtImageViewerMainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(QtImageViewerMainWindow);
@@ -93,8 +95,6 @@ public:
         menuFile->addAction(actionOpen);
         menuFile->addSeparator();
         menuFile->addAction(actionExit);
-        menuEdit->addAction(actionUndo);
-        menuEdit->addAction(actionRedo);
         menuHelp->addAction(actionAbout);
         menuHelp->addAction(actionHowToUse);
 

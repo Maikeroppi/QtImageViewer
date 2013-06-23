@@ -421,9 +421,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\GUI\ImageViewer.h" />
+    <ClInclude Include="..\Source\GUI\QtImageViewerCommands.h" />
     <ClInclude Include="..\Source\GUI\QtImageViewerMainWindow.h" />
     <ClInclude Include="ui_QtImageViewerMainWindow.h" />
     <ClCompile Include="..\Source\GUI\ImageViewer.cpp"  />
+    <ClCompile Include="..\Source\GUI\QtImageViewerCommands.cpp"  />
     <ClCompile Include="..\Source\GUI\QtImageViewerMainWindow.cpp"  />
     <ClCompile Include="..\Source\main.cpp"  />
     <ClCompile Include="QtImageViewer_automoc.cpp"  />

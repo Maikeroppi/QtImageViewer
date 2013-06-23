@@ -3,8 +3,22 @@
 
 #include <QMainWindow>
 #include <QFileDialog>
+#include <QCloseEvent>
+#include <QLabel>
+#include <QImage>
+#include <QPixmap>
+#include <QGraphicsScene>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsView>
+#include <QVBoxLayout>
+#include <QResizeEvent>
+#include <QSizePolicy>
+#include <QUndoStack>
+#include <QUndoCommand>
+#include <QAction>
 
-#include "ImageViewer.h"
+
+#include "QtImageViewerCommands.h"
 
 namespace Ui {
 class QtImageViewerMainWindow;
@@ -19,18 +33,24 @@ public:
     ~QtImageViewerMainWindow();
 
 private slots:
-    void Open_();
-    void Exit_();
-    void Undo_();
-    void Redo_();
-    void About_();
-    void HowToUse_();
+    void				Open_();
+    void				Exit_();
+    void				Undo_();
+    void				Redo_();
+    void				About_();
+    void				HowToUse_();
 
     
 private:
     Ui::QtImageViewerMainWindow *ui;
+	QImage				Image_;
+	QGraphicsScene*		Scene_;
+	QUndoStack*			UndoStack_;
+	QAction*			UndoAction_;
+	QAction*			RedoAction_;
 
-    ImageViewer* CreateImageViewerWindow_();
+	void				resizeEvent( QResizeEvent* resize_event );
+	void				SetSceneSize( const QSize& new_size );
 };
 
 #endif // QTIMAGEVIEWERMAINWINDOW_H
