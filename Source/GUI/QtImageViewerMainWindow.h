@@ -18,7 +18,9 @@
 #include <QAction>
 
 
+#include "ImageViewer.h"
 #include "QtImageViewerCommands.h"
+
 
 namespace Ui {
 class QtImageViewerMainWindow;
@@ -39,6 +41,7 @@ private slots:
     void				Redo_();
     void				About_();
     void				HowToUse_();
+	void				ZoomIn_();
 
     
 private:
@@ -49,7 +52,7 @@ private:
 	QAction*			UndoAction_;
 	QAction*			RedoAction_;
 
-	void				resizeEvent( QResizeEvent* resize_event );
+	void				LoadImageFile_( const QString& filename );
 	void				SetSceneSize( const QSize& new_size );
 };
 

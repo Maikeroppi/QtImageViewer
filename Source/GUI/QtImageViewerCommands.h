@@ -4,8 +4,8 @@
 #include <QUndoCommand>
 #include <QSize>
 #include <QWidget>
-
-QT_FORWARD_DECLARE_CLASS( QtImageViewerMainWindow )
+#include <QGraphicsScene>
+#include <QRect>
 
 class ResizeCommand: public QUndoCommand
 {
@@ -19,6 +19,19 @@ private:
 	QSize						NewSize_;
 	QWidget*					Target_;
 
+};
+
+class ZoomCommand: public QUndoCommand
+{
+public:
+	ZoomCommand( QGraphicsScene* scene, QImage* image, QRect zoom_area );
+	void						undo();
+	void						redo();
+
+private:
+	QGraphicsScene*				Scene_;
+	QRect						ZoomArea_;
+	QImage*						Image_;
 };
 
 #endif

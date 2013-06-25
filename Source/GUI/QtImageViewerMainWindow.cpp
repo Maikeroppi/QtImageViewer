@@ -5,8 +5,7 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
 	: QMainWindow( parent )
 	, ui( new Ui::QtImageViewerMainWindow )
 	, Image_()
-	, Scene_( 0 )
-	, UndoStack_( 0 )
+	, UndoStack_()
 {
     ui->setupUi( this );
 
@@ -20,10 +19,10 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
     connect( ui->actionHowToUse,    SIGNAL( triggered() ),       this,       SLOT( HowToUse_() ) );
 
 	// Initialize GUI elements
-	UndoStack_ = new QUndoStack( this );
-    Scene_ = new QGraphicsScene();
+	UndoStack_	= new QUndoStack( this );
+    Scene_		= new QGraphicsScene();
 
-	ui->ImageViewer->setScene( Scene_ );
+	//ui->ImageView->setScene( Scene_ );
 	this->setLayout( new QVBoxLayout() );
 
 	 
@@ -35,6 +34,13 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
     RedoAction_ = UndoStack_->createRedoAction( this, "&Redo" );
 	RedoAction_->setShortcuts( QKeySequence::Redo );
 	ui->menuEdit->addAction( RedoAction_ );
+
+	QAction* ZoomAction = new QAction( "Zoom In", this );
+	ui->menuEdit->addAction( ZoomAction );
+	connect( ZoomAction,			SIGNAL( triggered() ),		this,		SLOT( ZoomIn_() ) );
+
+	LoadImageFile_( "C:\\Users\\Public\\Pictures\\Sample Pictures\\Penguins.jpg" );
+	ui->ImageView->SetImage( &Image_ );
 }
 
 QtImageViewerMainWindow::~QtImageViewerMainWindow()
@@ -49,17 +55,19 @@ void QtImageViewerMainWindow::Open_()
         QDir::currentPath(),
         "Images (*.png *.bmp *.jpg)"
     ); 
-    
-    if ( !FileName.isEmpty() ) {
-        Image_.load( FileName );
+    LoadImageFile_( FileName ); 
+}
+
+void QtImageViewerMainWindow::LoadImageFile_( const QString& filename ) 
+{
+	   if ( !filename.isEmpty() ) {
+        Image_.load( filename );
 
 		if( !Image_.isNull() ) {
-			Scene_->clear();
-			Scene_->addPixmap( QPixmap::fromImage( Image_ ).scaled( ui->ImageViewer->size() ) );
-
-		    statusBar()->showMessage( "Image file loaded: " + FileName, 2000 );
+			ui->ImageView->SetImage( &Image_ );
+		    statusBar()->showMessage( "Image file loaded: " + filename, 2000 );
         } else {
-			statusBar()->showMessage( "Error loading file: " + FileName, 2000 );
+			statusBar()->showMessage( "Error loading file: " + filename, 2000 );
         }
     }
 }
@@ -77,6 +85,11 @@ void QtImageViewerMainWindow::Undo_()
 {
 }
 
+void QtImageViewerMainWindow::ZoomIn_()
+{
+	UndoStack_->push( new ZoomCommand( Scene_, &Image_, QRect( 50, 50, 120, 120 ) ) );
+}
+
 void QtImageViewerMainWindow::About_()
 {
 }
@@ -91,11 +104,5 @@ void QtImageViewerMainWindow::SetSceneSize( const QSize& new_size )
 	Scene_->setSceneRect( 0, 0, new_size.width(), new_size.height() );
 	QGraphicsPixmapItem* Pixmap = Scene_->addPixmap( QPixmap::fromImage( Image_ ).scaled( new_size ) );
 	Pixmap->setPos( 0, 0);
-}
-void QtImageViewerMainWindow::resizeEvent( QResizeEvent* resize_event)
-{
-	ResizeCommand* Resize = new ResizeCommand( this, this->size(), resize_event->size() );
-	Resize->setText( "Resize" );
-	UndoStack_->push( Resize );
 }
 

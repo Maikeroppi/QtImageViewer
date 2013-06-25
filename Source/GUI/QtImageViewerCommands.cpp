@@ -17,3 +17,20 @@ void ResizeCommand::redo()
 {
 	Target_->resize( NewSize_ );
 }
+
+ZoomCommand::ZoomCommand( QGraphicsScene* scene, QImage* image, QRect zoom_area )
+	: Scene_( scene )
+	, Image_( image )
+	, ZoomArea_( zoom_area )
+{
+	Scene_->clear();
+	Scene_->addPixmap( QPixmap::fromImage( Image_->copy( ZoomArea_ ) ).scaled( Scene_->width(), Scene_->height() ) );
+}
+
+void ZoomCommand::undo()
+{
+}
+
+void ZoomCommand::redo()
+{
+}

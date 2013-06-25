@@ -1,5 +1,6 @@
 # CMake file for a simple Qt ImageViewer
 
+
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8.11 )	# Version tested
 PROJECT( QtImageViewer )
 

@@ -13,7 +13,6 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
@@ -21,6 +20,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
+#include "ImageViewer.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -35,13 +35,12 @@ public:
     QAction *actionHowToUse;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
-    QGraphicsView *ImageViewer;
+    ImageViewer *ImageView;
+    QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
-    QMenu *menuWindows;
     QMenu *menuHelp;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *QtImageViewerMainWindow)
     {
@@ -64,14 +63,17 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        ImageViewer = new QGraphicsView(centralwidget);
-        ImageViewer->setObjectName(QStringLiteral("ImageViewer"));
-        ImageViewer->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        ImageViewer->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        ImageView = new ImageViewer(centralwidget);
+        ImageView->setObjectName(QStringLiteral("ImageView"));
+        ImageView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        ImageView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-        horizontalLayout->addWidget(ImageViewer);
+        horizontalLayout->addWidget(ImageView);
 
         QtImageViewerMainWindow->setCentralWidget(centralwidget);
+        statusbar = new QStatusBar(QtImageViewerMainWindow);
+        statusbar->setObjectName(QStringLiteral("statusbar"));
+        QtImageViewerMainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(QtImageViewerMainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
         menubar->setGeometry(QRect(0, 0, 555, 21));
@@ -79,18 +81,12 @@ public:
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menuEdit = new QMenu(menubar);
         menuEdit->setObjectName(QStringLiteral("menuEdit"));
-        menuWindows = new QMenu(menubar);
-        menuWindows->setObjectName(QStringLiteral("menuWindows"));
         menuHelp = new QMenu(menubar);
         menuHelp->setObjectName(QStringLiteral("menuHelp"));
         QtImageViewerMainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(QtImageViewerMainWindow);
-        statusbar->setObjectName(QStringLiteral("statusbar"));
-        QtImageViewerMainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuEdit->menuAction());
-        menubar->addAction(menuWindows->menuAction());
         menubar->addAction(menuHelp->menuAction());
         menuFile->addAction(actionOpen);
         menuFile->addSeparator();
@@ -114,7 +110,6 @@ public:
         actionHowToUse->setText(QApplication::translate("QtImageViewerMainWindow", "How to Use", 0));
         menuFile->setTitle(QApplication::translate("QtImageViewerMainWindow", "File", 0));
         menuEdit->setTitle(QApplication::translate("QtImageViewerMainWindow", "Edit", 0));
-        menuWindows->setTitle(QApplication::translate("QtImageViewerMainWindow", "Windows", 0));
         menuHelp->setTitle(QApplication::translate("QtImageViewerMainWindow", "Help", 0));
     } // retranslateUi
 
