@@ -10,13 +10,14 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
     ui->setupUi( this );
 
     // Connect up signals
+	// Trying out new Qt5 connect syntax with function pointers. Checks for valid connects at compile time, but does not support default parameters.
     // Menu bar
-    connect( ui->actionOpen,        SIGNAL( triggered() ),       this,       SLOT( Open_() ) );
-    connect( ui->actionExit,        SIGNAL( triggered() ),       this,       SLOT( Exit_() ) );
-    connect( ui->actionUndo,        SIGNAL( triggered() ),       this,       SLOT( Undo_() ) );
-    connect( ui->actionRedo,        SIGNAL( triggered() ),       this,       SLOT( Redo_() ) );
-    connect( ui->actionAbout,       SIGNAL( tirggered() ),       this,       SLOT( About_() ) );
-    connect( ui->actionHowToUse,    SIGNAL( triggered() ),       this,       SLOT( HowToUse_() ) );
+	connect( ui->actionOpen,		&QAction::triggered,	   this,       &QtImageViewerMainWindow::Open_ );
+    connect( ui->actionExit,        &QAction::triggered,	   this,       &QtImageViewerMainWindow::Exit_ );
+    connect( ui->actionUndo,        &QAction::triggered,       this,       &QtImageViewerMainWindow::Undo_ );
+    connect( ui->actionRedo,        &QAction::triggered,       this,       &QtImageViewerMainWindow::Redo_ );
+    connect( ui->actionAbout,       &QAction::triggered,       this,       &QtImageViewerMainWindow::About_ );
+    connect( ui->actionHowToUse,    &QAction::triggered,       this,       &QtImageViewerMainWindow::HowToUse_ );
 
 	// Initialize GUI elements
 	UndoStack_	= new QUndoStack( this );
@@ -37,7 +38,7 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
 
 	QAction* ZoomAction = new QAction( "Zoom In", this );
 	ui->menuEdit->addAction( ZoomAction );
-	connect( ZoomAction,			SIGNAL( triggered() ),		this,		SLOT( ZoomIn_() ) );
+	connect( ZoomAction,			&QAction::triggered,		this,		&QtImageViewerMainWindow::ZoomIn_ );
 
 	LoadImageFile_( "C:\\Users\\Public\\Pictures\\Sample Pictures\\Penguins.jpg" );
 	ui->ImageView->SetImage( &Image_ );
