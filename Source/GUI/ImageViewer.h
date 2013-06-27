@@ -23,10 +23,12 @@ public:
 
 private:
 	void				ScaleImage_( QSize const * new_size = 0 );
+	void				UpdateZoomRect_();
 	QGraphicsScene		Scene_;
 	QGraphicsRectItem*	Box_;
 	const QImage*		Image_;
 	QPointF				ClickPoint_;
+	QPointF				ReleasePoint_;
 	QRectF				ZoomArea_;	
 	bool				MouseDown_;
 };
