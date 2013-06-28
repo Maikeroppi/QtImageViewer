@@ -36,10 +36,6 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
 	RedoAction_->setShortcuts( QKeySequence::Redo );
 	ui->menuEdit->addAction( RedoAction_ );
 
-	QAction* ZoomAction = new QAction( "Zoom In", this );
-	ui->menuEdit->addAction( ZoomAction );
-	connect( ZoomAction,			&QAction::triggered,		this,		&QtImageViewerMainWindow::ZoomIn_ );
-
 	LoadImageFile_( "C:\\Users\\Public\\Pictures\\Sample Pictures\\Penguins.jpg" );
 	ui->ImageView->SetImage( &Image_ );
 }
@@ -84,11 +80,6 @@ void QtImageViewerMainWindow::Redo_()
 
 void QtImageViewerMainWindow::Undo_()
 {
-}
-
-void QtImageViewerMainWindow::ZoomIn_()
-{
-	UndoStack_->push( new ZoomCommand( Scene_, &Image_, QRect( 50, 50, 120, 120 ) ) );
 }
 
 void QtImageViewerMainWindow::About_()

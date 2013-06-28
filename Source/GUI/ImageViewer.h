@@ -27,9 +27,12 @@ private:
 	QGraphicsScene		Scene_;
 	QGraphicsRectItem*	Box_;
 	const QImage*		Image_;
+	QPixmap				ImagePixels_;
+	QGraphicsPixmapItem* PixmapItem_;
 	QPointF				ClickPoint_;
 	QPointF				ReleasePoint_;
-	QRectF				ZoomArea_;	
+	QRectF				ZoomArea_;
+	QPointF				ZoomOffset_;
 	bool				MouseDown_;
 };
 

@@ -7,6 +7,7 @@ ImageViewer::ImageViewer( QWidget* parent )
 	, Image_( 0 )
 	, ClickPoint_( -1, -1 )
 	, ZoomArea_( -2, -2, -1, -1)
+	, ZoomOffset_( 0, 0 )
 	, MouseDown_( false )
 {
 	setScene( &Scene_ );
@@ -29,7 +30,6 @@ void ImageViewer::mouseMoveEvent( QMouseEvent* move_event )
 {
 	if( Image_ != 0 && MouseDown_ ) {
 		ReleasePoint_ = mapToScene( move_event->pos().x(), move_event->pos().y() );
-		
 		UpdateZoomRect_();
 	}
 	QGraphicsView::mouseMoveEvent( move_event );
@@ -39,6 +39,10 @@ void ImageViewer::mouseReleaseEvent( QMouseEvent* release_event )
 {
 	if( release_event->button() == Qt::LeftButton) {
 		MouseDown_ = false;
+		ReleasePoint_ = mapToScene( release_event->pos().x(), release_event->pos().y() );
+		UpdateZoomRect_();
+		fitInView( ZoomArea_, Qt::KeepAspectRatio );
+		Box_->setRect( -2, -2, -1, -1 );
 	}
 	QGraphicsView::mouseReleaseEvent( release_event );
 }
@@ -52,6 +56,10 @@ void ImageViewer::resizeEvent( QResizeEvent* resize_event )
 void ImageViewer::SetImage( const QImage* image )
 {
 	Image_ = image;
+	Scene_.clear();
+	ImagePixels_ = QPixmap::fromImage( *image );
+	PixmapItem_ = Scene_.addPixmap( ImagePixels_ );
+	
 	ScaleImage_();	
 }
 
@@ -59,8 +67,7 @@ void ImageViewer::ScaleImage_( QSize const* new_size )
 {
 	if( Image_ != 0 ) {
 		if( new_size == 0 ) new_size = &( this->size() );
-		Scene_.clear();
-		Scene_.addPixmap( QPixmap::fromImage( *Image_ ).scaled( this->size(), Qt::KeepAspectRatio, Qt::FastTransformation ) );
+		fitInView( PixmapItem_, Qt::KeepAspectRatio );
 	}
 }
 
@@ -94,5 +101,6 @@ void ImageViewer::UpdateZoomRect_()
 	}
 
 	ZoomArea_.setCoords( x1, y1, x2, y2 );
+	//QRectF newRect = mapFromScene( ZoomArea_ );
 	Box_->setRect( ZoomArea_ );
 }
