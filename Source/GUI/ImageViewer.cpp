@@ -1,26 +1,30 @@
 #include "ImageViewer.h"
-#include "moc_ImageViewer.cpp"
 
 ImageViewer::ImageViewer( QWidget* parent )
 	: QGraphicsView( parent )
-	, Scene_()
+	, Scene_( new QGraphicsScene( this ) )
 	, Box_()
-	, Image_( 0 )
+	, Image_()
 	, ClickPoint_( -1, -1 )
 	, ZoomArea_( -2, -2, -1, -1 )
 	, BoxArea_( -2, -2, -1, -1 )
 	, ZoomOffset_( 0, 0 )
 	, MouseDown_( false )
+	, PixmapItem_( NULL )
 {
-	setScene( &Scene_ );
-	ScaleImage_();
+	setScene( Scene_ );
+}
+
+ImageViewer::~ImageViewer()
+{
+	delete Scene_;
 }
 
 void ImageViewer::mousePressEvent( QMouseEvent* press_event )
 {
-	if( Image_ != 0 && press_event->button() == Qt::LeftButton ) {
+	if( !Image_.isNull() && press_event->button() == Qt::LeftButton ) {
 		if( Box_ == 0 ) {
-			Box_ = Scene_.addRect( -2, -2, -1, -1 );
+			Box_ = Scene_->addRect( -2, -2, -1, -1 );
 		}
 		MouseDown_ = true;
 		ClickPoint_ = mapToScene( press_event->pos().x(), press_event->pos().y() );
@@ -30,7 +34,7 @@ void ImageViewer::mousePressEvent( QMouseEvent* press_event )
 
 void ImageViewer::mouseMoveEvent( QMouseEvent* move_event )
 {
-	if( Image_ != 0 && MouseDown_ ) {
+	if( !Image_.isNull() && MouseDown_ ) {
 		ReleasePoint_ = mapToScene( move_event->pos().x(), move_event->pos().y() );
 		UpdateZoomRect_( BoxArea_ );
 		Box_->setRect( BoxArea_ );
@@ -65,25 +69,28 @@ QRectF ImageViewer::ZoomRect()
 
 void ImageViewer::resizeEvent( QResizeEvent* resize_event )
 {
+	ScaleImage_();
 	QGraphicsView::resizeEvent( resize_event );
-	ScaleImage_( &( resize_event->size() ) );
 }
 
-void ImageViewer::SetImage( const QImage* image )
+bool ImageViewer::LoadImage( const QString& filename )
 {
-	Image_ = image;
-	Scene_.clear();
-	ImagePixels_ = QPixmap::fromImage( *Image_ );
-	Scene_.clear();
-	PixmapItem_ = Scene_.addPixmap( ImagePixels_ );
-	
-	ScaleImage_();	
+	bool LoadSuccessful = false;
+	Image_.load( filename );
+	if( !Image_.isNull() ) {
+		Scene_->removeItem( PixmapItem_ );
+		PixmapItem_ = Scene_->addPixmap( QPixmap::fromImage( Image_ ) );
+		ScaleImage_();
+
+		LoadSuccessful = true;
+	}
+
+	return LoadSuccessful;
 }
 
-void ImageViewer::ScaleImage_( QSize const* new_size )
+void ImageViewer::ScaleImage_()
 {
-	if( Image_ != 0 ) {
-		if( new_size == 0 ) new_size = &( this->size() );
+	if( !Image_.isNull() ) {
 		fitInView( PixmapItem_, Qt::KeepAspectRatio );
 		ZoomArea_ = sceneRect();
 	}

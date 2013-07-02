@@ -15,12 +15,13 @@ class ImageViewer: public QGraphicsView
 
 public:
 	ImageViewer( QWidget* parent = 0 );
+	~ImageViewer();
 
 	void				mouseMoveEvent ( QMouseEvent* move_event );
 	void				mousePressEvent ( QMouseEvent* press_event);
 	void				mouseReleaseEvent ( QMouseEvent* release_event );
 	void				resizeEvent( QResizeEvent* resize_event );
-	void				SetImage( const QImage* image );
+	bool				LoadImage( const QString& filename );
 	QImage const*		Image();
 	void				NewZoomRect( const QRectF& zoom_box );
 	QRectF				ZoomRect();
@@ -29,11 +30,11 @@ signals:
 	void				ZoomBoxDrawn( const QRectF& zoom_box );
 
 private:
-	void				ScaleImage_( QSize const * new_size = 0 );
+	void				ScaleImage_();
 	void				UpdateZoomRect_( QRectF& in_rect );
-	QGraphicsScene		Scene_;
+	QGraphicsScene*		Scene_;
 	QGraphicsRectItem*	Box_;
-	const QImage*		Image_;
+	QImage				Image_;
 	QPixmap				ImagePixels_;
 	QGraphicsPixmapItem* PixmapItem_;
 	QPointF				ClickPoint_;
