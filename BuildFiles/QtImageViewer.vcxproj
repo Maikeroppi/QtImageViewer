@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{51D4D80D-595F-42FA-962E-DE093FE73647}</ProjectGUID>
+    <ProjectGUID>{7A5D577D-ED4B-4F7D-86BD-F898124DBB44}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>QtImageViewer</ProjectName>
@@ -53,25 +53,25 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QtImageViewer.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QtImageViewer</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QtImageViewer.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QtImageViewer</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">QtImageViewer.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">QtImageViewer</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">QtImageViewer.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">QtImageViewer</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
@@ -80,12 +80,13 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -94,14 +95,14 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Debug</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Qt/Projects/QtImageViewer/BuildFiles/Debug/QtImageViewer.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Dropbox/QtImageViewer/BuildFiles/Debug/QtImageViewer.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,11 +112,11 @@
     <PreBuildEvent>
       <Message>Automoc for target QtImageViewer</Message>
       <Command>setlocal
-cd C:\Qt\Projects\QtImageViewer\BuildFiles
+cd C:\Dropbox\QtImageViewer\BuildFiles
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Qt/Projects/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Dropbox/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -126,11 +127,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmaind.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgetsd.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Guid.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Cored.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgetsd.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmaind.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgetsd.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Guid.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Cored.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>C:/Qt/Projects/QtImageViewer/BuildFiles/Debug/QtImageViewer.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Qt/Projects/QtImageViewer/BuildFiles/Debug/QtImageViewer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Dropbox/QtImageViewer/BuildFiles/Debug/QtImageViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dropbox/QtImageViewer/BuildFiles/Debug/QtImageViewer.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
       <Version></Version>
     </Link>
@@ -140,10 +141,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -153,14 +155,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>Release</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Qt/Projects/QtImageViewer/BuildFiles/Release/QtImageViewer.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Dropbox/QtImageViewer/BuildFiles/Release/QtImageViewer.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -170,11 +172,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PreBuildEvent>
       <Message>Automoc for target QtImageViewer</Message>
       <Command>setlocal
-cd C:\Qt\Projects\QtImageViewer\BuildFiles
+cd C:\Dropbox\QtImageViewer\BuildFiles
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Qt/Projects/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Dropbox/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -185,11 +187,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmain.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Gui.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Core.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmain.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Gui.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Core.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>C:/Qt/Projects/QtImageViewer/BuildFiles/Release/QtImageViewer.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Qt/Projects/QtImageViewer/BuildFiles/Release/QtImageViewer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Dropbox/QtImageViewer/BuildFiles/Release/QtImageViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dropbox/QtImageViewer/BuildFiles/Release/QtImageViewer.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
       <Version></Version>
     </Link>
@@ -199,10 +201,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -212,14 +215,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Qt/Projects/QtImageViewer/BuildFiles/MinSizeRel/QtImageViewer.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Dropbox/QtImageViewer/BuildFiles/MinSizeRel/QtImageViewer.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -229,11 +232,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PreBuildEvent>
       <Message>Automoc for target QtImageViewer</Message>
       <Command>setlocal
-cd C:\Qt\Projects\QtImageViewer\BuildFiles
+cd C:\Dropbox\QtImageViewer\BuildFiles
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Qt/Projects/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Dropbox/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -244,11 +247,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmaind.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Gui.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Core.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmaind.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Gui.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Core.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ImportLibrary>C:/Qt/Projects/QtImageViewer/BuildFiles/MinSizeRel/QtImageViewer.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Qt/Projects/QtImageViewer/BuildFiles/MinSizeRel/QtImageViewer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Dropbox/QtImageViewer/BuildFiles/MinSizeRel/QtImageViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dropbox/QtImageViewer/BuildFiles/MinSizeRel/QtImageViewer.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
       <Version></Version>
     </Link>
@@ -258,11 +261,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -271,14 +275,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:/Qt/Projects/QtImageViewer/BuildFiles/RelWithDebInfo/QtImageViewer.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:/Dropbox/QtImageViewer/BuildFiles/RelWithDebInfo/QtImageViewer.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:/Qt/Projects/QtImageViewer/BuildFiles;C:/Qt/Projects/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:/Dropbox/QtImageViewer/BuildFiles;C:/Dropbox/QtImageViewer;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtWidgets;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtGui;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include/QtCore;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/include;C:/Qt/Qt5.0.2/5.0.2/msvc2010_opengl/mkspecs/win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -288,11 +292,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PreBuildEvent>
       <Message>Automoc for target QtImageViewer</Message>
       <Command>setlocal
-cd C:\Qt\Projects\QtImageViewer\BuildFiles
+cd C:\Dropbox\QtImageViewer\BuildFiles
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Qt/Projects/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -E cmake_automoc C:/Dropbox/QtImageViewer/BuildFiles/CMakeFiles/QtImageViewer_automoc.dir/
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -303,11 +307,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmaind.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Gui.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Core.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\qtmaind.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Widgets.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Gui.lib;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\Qt5Core.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>C:/Qt/Projects/QtImageViewer/BuildFiles/RelWithDebInfo/QtImageViewer.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Qt/Projects/QtImageViewer/BuildFiles/RelWithDebInfo/QtImageViewer.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Dropbox/QtImageViewer/BuildFiles/RelWithDebInfo/QtImageViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Dropbox/QtImageViewer/BuildFiles/RelWithDebInfo/QtImageViewer.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
       <Version></Version>
     </Link>
@@ -317,9 +321,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\CmakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Qt/Projects/QtImageViewer/CmakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Dropbox/QtImageViewer/CmakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Qt/Projects/QtImageViewer -BC:/Qt/Projects/QtImageViewer/BuildFiles --check-stamp-file C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Dropbox/QtImageViewer -BC:/Dropbox/QtImageViewer/BuildFiles --check-stamp-file C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -327,11 +331,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Qt/Projects/QtImageViewer/CmakeLists.txt;C:\Qt\Projects\QtImageViewer\CMakeLists.txt;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Projects\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Qt/Projects/QtImageViewer/CmakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Dropbox/QtImageViewer/CmakeLists.txt;C:\Dropbox\QtImageViewer\CMakeLists.txt;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Dropbox\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Dropbox/QtImageViewer/CmakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Qt/Projects/QtImageViewer -BC:/Qt/Projects/QtImageViewer/BuildFiles --check-stamp-file C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Dropbox/QtImageViewer -BC:/Dropbox/QtImageViewer/BuildFiles --check-stamp-file C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -339,11 +343,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Qt/Projects/QtImageViewer/CmakeLists.txt;C:\Qt\Projects\QtImageViewer\CMakeLists.txt;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Projects\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Qt/Projects/QtImageViewer/CmakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Dropbox/QtImageViewer/CmakeLists.txt;C:\Dropbox\QtImageViewer\CMakeLists.txt;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Dropbox\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Dropbox/QtImageViewer/CmakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Qt/Projects/QtImageViewer -BC:/Qt/Projects/QtImageViewer/BuildFiles --check-stamp-file C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Dropbox/QtImageViewer -BC:/Dropbox/QtImageViewer/BuildFiles --check-stamp-file C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -351,11 +355,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Qt/Projects/QtImageViewer/CmakeLists.txt;C:\Qt\Projects\QtImageViewer\CMakeLists.txt;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Projects\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Qt/Projects/QtImageViewer/CmakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Dropbox/QtImageViewer/CmakeLists.txt;C:\Dropbox\QtImageViewer\CMakeLists.txt;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Dropbox\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Dropbox/QtImageViewer/CmakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Qt/Projects/QtImageViewer -BC:/Qt/Projects/QtImageViewer/BuildFiles --check-stamp-file C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Dropbox/QtImageViewer -BC:/Dropbox/QtImageViewer/BuildFiles --check-stamp-file C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -363,15 +367,15 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Qt/Projects/QtImageViewer/CmakeLists.txt;C:\Qt\Projects\QtImageViewer\CMakeLists.txt;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Projects\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Dropbox/QtImageViewer/CmakeLists.txt;C:\Dropbox\QtImageViewer\CMakeLists.txt;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeSystem.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCCompiler.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\2.8.11.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Dropbox\QtImageViewer\CmakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\CMakeFiles\generate.stamp</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\Source\GUI\QtImageViewerMainWindow.ui">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_QtImageViewerMainWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Qt/Projects/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
+C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Dropbox/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -379,11 +383,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Qt\Projects\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Dropbox\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_QtImageViewerMainWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Qt/Projects/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
+C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Dropbox/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -391,11 +395,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Qt\Projects\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Dropbox\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_QtImageViewerMainWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Qt/Projects/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
+C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Dropbox/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -403,11 +407,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Qt\Projects\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Dropbox\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_QtImageViewerMainWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Qt/Projects/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
+C:\Qt\Qt5.0.2\5.0.2\msvc2010_opengl\bin\uic.exe -o C:/Dropbox/QtImageViewer/BuildFiles/ui_QtImageViewerMainWindow.h C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -415,8 +419,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Qt/Projects/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Qt\Projects\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Qt\Projects\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Dropbox/QtImageViewer/Source/GUI/QtImageViewerMainWindow.ui;C:\Dropbox\QtImageViewer\Source\GUI\QtImageViewerMainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Dropbox\QtImageViewer\BuildFiles\ui_QtImageViewerMainWindow.h</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -431,8 +435,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="QtImageViewer_automoc.cpp"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Qt/Projects/QtImageViewer/BuildFiles/ZERO_CHECK.vcxproj">
-      <Project>0933DEDD-6751-47FC-9C08-B653D1693B8C</Project>
+    <ProjectReference Include="C:/Dropbox/QtImageViewer/BuildFiles/ZERO_CHECK.vcxproj">
+      <Project>43C8BAE1-ED8C-41F5-8527-03E66EB8384C</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

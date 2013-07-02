@@ -1,7 +1,7 @@
 # CMake file for a simple Qt ImageViewer
 
 
-CMAKE_MINIMUM_REQUIRED( VERSION 2.8.11 )	# Version tested
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8.10 )	# Version tested
 PROJECT( QtImageViewer )
 
 # Set directory for FindQt5 module
@@ -9,6 +9,11 @@ SET( CMAKE_PREFIX_PATH "C:\\Qt\\Qt5.0.2\\5.0.2\\msvc2010_opengl\\" )
 
 SET( CMAKE_INCLUDE_CURRENT_DIR					ON )
 SET( CMAKE_AUTOMOC								ON )
+
+IF( MSVC ) 
+    # Enable multi processes to speed up builds
+    ADD_DEFINITIONS( /MP )
+ENDIF()
 
 # Packages
 FIND_PACKAGE( Qt5Widgets						REQUIRED )
@@ -32,7 +37,7 @@ ADD_EXECUTABLE( QtImageViewer WIN32
     
 # Specify linking and includes
 TARGET_LINK_LIBRARIES( QtImageViewer
-    #Qt5::Widgets
+    Qt5::Widgets
     Qt5::WinMain
     )
 QT5_USE_MODULES( QtImageViewer Widgets )

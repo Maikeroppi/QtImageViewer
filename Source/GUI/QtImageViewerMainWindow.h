@@ -37,12 +37,10 @@ public:
 private slots:
     void				Open_();
     void				Exit_();
-    void				Undo_();
-    void				Redo_();
     void				About_();
     void				HowToUse_();
-	void				ZoomIn_();
-
+	void				HandleZoomBox( const QRectF& zoom_box );
+	
     
 private:
     Ui::QtImageViewerMainWindow *ui;

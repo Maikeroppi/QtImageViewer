@@ -14,10 +14,11 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
     // Menu bar
 	connect( ui->actionOpen,		&QAction::triggered,	   this,       &QtImageViewerMainWindow::Open_ );
     connect( ui->actionExit,        &QAction::triggered,	   this,       &QtImageViewerMainWindow::Exit_ );
-    connect( ui->actionUndo,        &QAction::triggered,       this,       &QtImageViewerMainWindow::Undo_ );
-    connect( ui->actionRedo,        &QAction::triggered,       this,       &QtImageViewerMainWindow::Redo_ );
     connect( ui->actionAbout,       &QAction::triggered,       this,       &QtImageViewerMainWindow::About_ );
     connect( ui->actionHowToUse,    &QAction::triggered,       this,       &QtImageViewerMainWindow::HowToUse_ );
+
+	// New Signal/Slot syntax doesn't work when passing parameters
+	connect( ui->ImageView,			SIGNAL( ZoomBoxDrawn( const QRectF& ) ), this, SLOT( HandleZoomBox( const QRectF& ) ) );
 
 	// Initialize GUI elements
 	UndoStack_	= new QUndoStack( this );
@@ -36,8 +37,9 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
 	RedoAction_->setShortcuts( QKeySequence::Redo );
 	ui->menuEdit->addAction( RedoAction_ );
 
-	LoadImageFile_( "C:\\Users\\Public\\Pictures\\Sample Pictures\\Penguins.jpg" );
-	ui->ImageView->SetImage( &Image_ );
+	// Load an image for quick testing.
+	/*LoadImageFile_( "C:\\Users\\Public\\Pictures\\Sample Pictures\\Penguins.jpg" );
+	ui->ImageView->SetImage( &Image_ );*/
 }
 
 QtImageViewerMainWindow::~QtImageViewerMainWindow()
@@ -73,14 +75,6 @@ void QtImageViewerMainWindow::Exit_()
 {
 }
 
-void QtImageViewerMainWindow::Redo_()
-{
-
-}
-
-void QtImageViewerMainWindow::Undo_()
-{
-}
 
 void QtImageViewerMainWindow::About_()
 {
@@ -88,6 +82,11 @@ void QtImageViewerMainWindow::About_()
 
 void QtImageViewerMainWindow::HowToUse_()
 {
+}
+
+void QtImageViewerMainWindow::HandleZoomBox( const QRectF& zoom_box )
+{
+	UndoStack_->push( new ZoomCommand( ui->ImageView, ui->ImageView->ZoomRect(), zoom_box ) );
 }
 
 void QtImageViewerMainWindow::SetSceneSize( const QSize& new_size )

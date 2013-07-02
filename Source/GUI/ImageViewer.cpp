@@ -1,4 +1,5 @@
 #include "ImageViewer.h"
+#include "moc_ImageViewer.cpp"
 
 ImageViewer::ImageViewer( QWidget* parent )
 	: QGraphicsView( parent )
@@ -6,7 +7,8 @@ ImageViewer::ImageViewer( QWidget* parent )
 	, Box_()
 	, Image_( 0 )
 	, ClickPoint_( -1, -1 )
-	, ZoomArea_( -2, -2, -1, -1)
+	, ZoomArea_( -2, -2, -1, -1 )
+	, BoxArea_( -2, -2, -1, -1 )
 	, ZoomOffset_( 0, 0 )
 	, MouseDown_( false )
 {
@@ -30,21 +32,35 @@ void ImageViewer::mouseMoveEvent( QMouseEvent* move_event )
 {
 	if( Image_ != 0 && MouseDown_ ) {
 		ReleasePoint_ = mapToScene( move_event->pos().x(), move_event->pos().y() );
-		UpdateZoomRect_();
+		UpdateZoomRect_( BoxArea_ );
+		Box_->setRect( BoxArea_ );
 	}
 	QGraphicsView::mouseMoveEvent( move_event );
 }
 
 void ImageViewer::mouseReleaseEvent( QMouseEvent* release_event )
 {
+	QRectF NewZoomBox;
 	if( release_event->button() == Qt::LeftButton) {
 		MouseDown_ = false;
 		ReleasePoint_ = mapToScene( release_event->pos().x(), release_event->pos().y() );
-		UpdateZoomRect_();
-		fitInView( ZoomArea_, Qt::KeepAspectRatio );
+		UpdateZoomRect_( NewZoomBox );
 		Box_->setRect( -2, -2, -1, -1 );
+		emit ZoomBoxDrawn( NewZoomBox );
 	}
 	QGraphicsView::mouseReleaseEvent( release_event );
+}
+
+void ImageViewer::NewZoomRect( const QRectF& zoom_box )
+{
+	ZoomArea_ = zoom_box;
+	
+	fitInView( ZoomArea_, Qt::KeepAspectRatio );
+}
+
+QRectF ImageViewer::ZoomRect()
+{
+	return ZoomArea_;
 }
 
 void ImageViewer::resizeEvent( QResizeEvent* resize_event )
@@ -57,7 +73,8 @@ void ImageViewer::SetImage( const QImage* image )
 {
 	Image_ = image;
 	Scene_.clear();
-	ImagePixels_ = QPixmap::fromImage( *image );
+	ImagePixels_ = QPixmap::fromImage( *Image_ );
+	Scene_.clear();
 	PixmapItem_ = Scene_.addPixmap( ImagePixels_ );
 	
 	ScaleImage_();	
@@ -68,10 +85,11 @@ void ImageViewer::ScaleImage_( QSize const* new_size )
 	if( Image_ != 0 ) {
 		if( new_size == 0 ) new_size = &( this->size() );
 		fitInView( PixmapItem_, Qt::KeepAspectRatio );
+		ZoomArea_ = sceneRect();
 	}
 }
 
-void ImageViewer::UpdateZoomRect_()
+void ImageViewer::UpdateZoomRect_( QRectF& in_box )
 {
 	// Need to determine which point belongs in which position in order to support drawing 
 	// boxes in any direction.
@@ -100,7 +118,5 @@ void ImageViewer::UpdateZoomRect_()
 		y2 = ReleasePoint_.y();
 	}
 
-	ZoomArea_.setCoords( x1, y1, x2, y2 );
-	//QRectF newRect = mapFromScene( ZoomArea_ );
-	Box_->setRect( ZoomArea_ );
+	in_box.setCoords( x1, y1, x2, y2 );
 }

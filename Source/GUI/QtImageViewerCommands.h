@@ -7,31 +7,19 @@
 #include <QGraphicsScene>
 #include <QRect>
 
-class ResizeCommand: public QUndoCommand
-{
-public:
-	ResizeCommand( QWidget* target, QSize old_size, QSize new_size );
-	void						undo();
-	void						redo();
-
-private:
-	QSize						OldSize_;
-	QSize						NewSize_;
-	QWidget*					Target_;
-
-};
+#include "ImageViewer.h"
 
 class ZoomCommand: public QUndoCommand
 {
 public:
-	ZoomCommand( QGraphicsScene* scene, QImage* image, QRect zoom_area );
+	ZoomCommand( ImageViewer* viewer, const QRectF& old_zoom, const QRectF& new_zoom );
 	void						undo();
 	void						redo();
 
 private:
-	QGraphicsScene*				Scene_;
-	QRect						ZoomArea_;
-	QImage*						Image_;
+	ImageViewer*				Viewer_;
+	QRectF						OldZoom_;
+	QRectF						NewZoom_;
 };
 
 #endif
