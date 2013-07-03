@@ -4,6 +4,7 @@
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8.10 )	# Version tested
 PROJECT( QtImageViewer )
 
+
 # Set directory for FindQt5 module
 SET( CMAKE_PREFIX_PATH "C:\\Qt\\Qt5.0.2\\5.0.2\\msvc2010_opengl\\" )
 
@@ -25,14 +26,19 @@ FILE( GLOB_RECURSE QtImageViewer_HEADERS		"Source/*.h" )
 # Get QtDesigner ui files
 FILE( GLOB_RECURSE QtImageViewer_UI				"Source/*.ui" )
 
+# Get Qt Resource files
+FILE( GLOB_RECURSE QtImageViewer_QRC			"Resources/*.qrc" )
+
 # Generate headers from .ui files
 QT5_WRAP_UI( QtImageViewer_UI_WRAPPED			${QtImageViewer_UI} )
+QT5_ADD_RESOURCES( QtImageViewer_RES			${QtImageViewer_QRC} )
 
 # Specify program and its inputs
 ADD_EXECUTABLE( QtImageViewer WIN32				
     ${QtImageViewer_SOURCE}
     ${QtImageViewer_HEADERS}
     ${QtImageViewer_UI_WRAPPED}
+	${QtImageViewer_RES}
     )
     
 # Specify linking and includes

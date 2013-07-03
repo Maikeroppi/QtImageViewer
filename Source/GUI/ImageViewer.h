@@ -25,6 +25,7 @@ public:
 	QImage const*		Image();
 	void				NewZoomRect( const QRectF& zoom_box );
 	QRectF				ZoomRect();
+	void				SetAspectRatioMode( const Qt::AspectRatioMode ratio_mode );
 
 signals:
 	void				ZoomBoxDrawn( const QRectF& zoom_box );
@@ -43,6 +44,7 @@ private:
 	QRectF				BoxArea_;
 	QPointF				ZoomOffset_;
 	bool				MouseDown_;
+	Qt::AspectRatioMode	RatioMode_;
 };
 
 #endif

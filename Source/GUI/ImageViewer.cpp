@@ -11,6 +11,7 @@ ImageViewer::ImageViewer( QWidget* parent )
 	, ZoomOffset_( 0, 0 )
 	, MouseDown_( false )
 	, PixmapItem_( NULL )
+	, RatioMode_( Qt::KeepAspectRatio )
 {
 	setScene( Scene_ );
 }
@@ -59,12 +60,18 @@ void ImageViewer::NewZoomRect( const QRectF& zoom_box )
 {
 	ZoomArea_ = zoom_box;
 	
-	fitInView( ZoomArea_, Qt::KeepAspectRatio );
+	fitInView( ZoomArea_, RatioMode_ );
 }
 
 QRectF ImageViewer::ZoomRect()
 {
 	return ZoomArea_;
+}
+
+void ImageViewer::SetAspectRatioMode( const Qt::AspectRatioMode ratio_mode )
+{
+	RatioMode_ = ratio_mode;
+	ScaleImage_();
 }
 
 void ImageViewer::resizeEvent( QResizeEvent* resize_event )
@@ -91,7 +98,7 @@ bool ImageViewer::LoadImage( const QString& filename )
 void ImageViewer::ScaleImage_()
 {
 	if( !Image_.isNull() ) {
-		fitInView( PixmapItem_, Qt::KeepAspectRatio );
+		fitInView( PixmapItem_, RatioMode_ );
 		ZoomArea_ = sceneRect();
 	}
 }

@@ -16,6 +16,8 @@
 #include <QUndoStack>
 #include <QUndoCommand>
 #include <QAction>
+#include <QIcon>
+#include <QMessageBox>
 
 
 #include "ImageViewer.h"
@@ -38,19 +40,17 @@ private slots:
     void				Open_();
     void				Exit_();
     void				About_();
-    void				HowToUse_();
-	void				HandleZoomBox( const QRectF& zoom_box );
+	void				ToggleLockAspectRatio_();
+    void				HandleZoomBox_( const QRectF& zoom_box );
 	
     
 private:
     Ui::QtImageViewerMainWindow *ui;
-	QImage				Image_;
 	QGraphicsScene*		Scene_;
 	QUndoStack*			UndoStack_;
 	QAction*			UndoAction_;
 	QAction*			RedoAction_;
 
-	void				LoadImageFile_( const QString& filename );
 	void				SetSceneSize( const QSize& new_size );
 };
 

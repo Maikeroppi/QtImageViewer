@@ -13,6 +13,9 @@
     <ClCompile Include="..\Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="qrc_QtImageViewerMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="QtImageViewer_automoc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,6 +37,7 @@
   <ItemGroup>
     <CustomBuild Include="..\CmakeLists.txt" />
     <CustomBuild Include="..\Source\GUI\QtImageViewerMainWindow.ui" />
+    <CustomBuild Include="..\Resources\QtImageViewerMainWindow.qrc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_QtImageViewerMainWindow_t {
     QByteArrayData data[8];
-    char stringdata[78];
+    char stringdata[92];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,12 +34,13 @@ QT_MOC_LITERAL(1, 24, 5),
 QT_MOC_LITERAL(2, 30, 0),
 QT_MOC_LITERAL(3, 31, 5),
 QT_MOC_LITERAL(4, 37, 6),
-QT_MOC_LITERAL(5, 44, 9),
-QT_MOC_LITERAL(6, 54, 13),
-QT_MOC_LITERAL(7, 68, 8)
+QT_MOC_LITERAL(5, 44, 22),
+QT_MOC_LITERAL(6, 67, 14),
+QT_MOC_LITERAL(7, 82, 8)
     },
     "QtImageViewerMainWindow\0Open_\0\0Exit_\0"
-    "About_\0HowToUse_\0HandleZoomBox\0zoom_box\0"
+    "About_\0ToggleLockAspectRatio_\0"
+    "HandleZoomBox_\0zoom_box\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -81,8 +82,8 @@ void QtImageViewerMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call 
         case 0: _t->Open_(); break;
         case 1: _t->Exit_(); break;
         case 2: _t->About_(); break;
-        case 3: _t->HowToUse_(); break;
-        case 4: _t->HandleZoomBox((*reinterpret_cast< const QRectF(*)>(_a[1]))); break;
+        case 3: _t->ToggleLockAspectRatio_(); break;
+        case 4: _t->HandleZoomBox_((*reinterpret_cast< const QRectF(*)>(_a[1]))); break;
         default: ;
         }
     }
