@@ -4,10 +4,6 @@
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8.10 )	# Version tested
 PROJECT( QtImageViewer )
 
-
-# Set directory for FindQt5 module
-SET( CMAKE_PREFIX_PATH "C:\\Qt\\Qt5.0.2\\5.0.2\\msvc2010_opengl\\" )
-
 SET( CMAKE_INCLUDE_CURRENT_DIR					ON )
 SET( CMAKE_AUTOMOC								ON )
 

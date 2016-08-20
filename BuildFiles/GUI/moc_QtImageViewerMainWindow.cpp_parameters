@@ -1,6 +1,0 @@
--IC:/Qt/Projects/QtImageViewer
--IC:/Qt/Projects/QtImageViewer/BuildFiles
--DWIN32
--o
-C:/Qt/Projects/QtImageViewer/BuildFiles/GUI/moc_QtImageViewerMainWindow.cpp
-C:/Qt/Projects/QtImageViewer/GUI/QtImageViewerMainWindow.h
