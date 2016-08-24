@@ -40,9 +40,8 @@ QtImageViewerMainWindow::QtImageViewerMainWindow(QWidget *parent)
 	
 	ui->actionLockAspectRatio->setChecked( true );
 
-	// Load an image for quick testing.
-	/*LoadImageFile_( "C:\\Users\\Public\\Pictures\\Sample Pictures\\Penguins.jpg" );
-	ui->ImageView->SetImage( &Image_ );*/
+	// Load an image by default for testing
+    ui->ImageView->LoadImage(":/root/adrspach-teplice-rocks-and-lake-panorama-picjumbo-com.jpg");
 }
 
 QtImageViewerMainWindow::~QtImageViewerMainWindow()
